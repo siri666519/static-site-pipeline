@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        DOCKERHUB_USERNAME = credentials('sirikaku')
-        DOCKERHUB_PASSWORD = credentials('Sirikaku@123')
+        DOCKERHUB_USERNAME = credentials('dockerhub-username')
+        DOCKERHUB_PASSWORD = credentials('dockerhub-password')
         IMAGE_NAME = "${DOCKERHUB_USERNAME}/static-site"
     }
 
@@ -43,3 +43,4 @@ pipeline {
         }
     }
 }
+
